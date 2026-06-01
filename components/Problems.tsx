@@ -1,36 +1,67 @@
+import {
+  ClipboardList,
+  TrendingDown,
+  Hourglass,
+  TrendingUp,
+} from "lucide-react";
+
 export default function Problems() {
   const problems = [
-    "Falta de organização interna",
-    "Dificuldade para controlar custos",
-    "Processos desorganizados",
-    "Falta de indicadores para decisões",
-    "Equipe improdutiva",
-    "Crescimento sem planejamento",
+    {
+      title: "Falta de organização",
+      icon: ClipboardList,
+    },
+    {
+      title: "Custos fora de controle",
+      icon: TrendingDown,
+    },
+    {
+      title: "Equipe improdutiva",
+      icon: Hourglass,
+    },
+    {
+      title: "Crescimento sem planejamento",
+      icon: TrendingUp,
+    },
   ];
 
   return (
-    <section className="bg-slate-50 py-24">
+    <section className="bg-slate-50 py-16 md:py-24">
       <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-center text-slate-900 mb-6">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-4">
           Sua empresa enfrenta algum destes desafios?
         </h2>
 
-        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-16">
-          Muitos negócios possuem potencial para crescer, mas enfrentam
-          obstáculos que dificultam a organização e a tomada de decisões.
+        <p className="text-center text-slate-600 max-w-2xl mx-auto mb-10">
+          Identificamos os principais gargalos e ajudamos sua empresa a tomar
+          decisões com mais segurança.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {problems.map((problem) => (
-            <div
-              key={problem}
-              className="bg-white p-6 rounded-xl shadow border"
-            >
-              <p className="font-medium text-slate-800">
-                ✓ {problem}
-              </p>
-            </div>
-          ))}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+          {problems.map((problem) => {
+            const Icon = problem.icon;
+
+            return (
+              <div
+                key={problem.title}
+                className="bg-white p-4 rounded-xl shadow border text-center transition-all duration-300 md:hover:-translate-y-2 md:hover:shadow-xl"
+              >
+                <div className="relative inline-flex mb-4">
+                  <div className="w-16 h-16 rounded-full bg-red-50 flex items-center justify-center">
+                    <Icon className="text-red-500" size={32} />
+                  </div>
+
+                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-sm font-bold">
+                    ×
+                  </div>
+                </div>
+
+                <p className="font-semibold text-slate-800">
+                  {problem.title}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
