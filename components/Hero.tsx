@@ -2,11 +2,13 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-20 left-20 w-72 h-72 bg-green-500 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-72 h-72 bg-blue-500 rounded-full blur-3xl"></div>
-      </div>
+    <section
+      id="inicio"
+      className="relative overflow-hidden text-white bg-cover bg-center bg-no-repeat"
+      style={{
+      backgroundImage: "url('/fundohero.jpg')",  }}>
+
+      <div className="absolute inset-0 bg-slate-900/75"></div>
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-28 pb-16 md:pt-40 md:pb-24">
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
