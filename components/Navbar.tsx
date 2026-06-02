@@ -28,19 +28,19 @@ useEffect(() => {
           </h1>
 
           <nav className="hidden md:flex gap-8">
-            <a href="#inicio" className="hover:text-green-600 transition">
+            <a href="#inicio" className="text-slate-700 hover:text-green-600 transition">
               Início
             </a>
 
-            <a href="#servicos" className="hover:text-green-600 transition">
+            <a href="#servicos" className="text-slate-700 hover:text-green-600 transition">
               Serviços
             </a>
 
-            <a href="#como-funciona" className="hover:text-green-600 transition">
+            <a href="#como-funciona" className="text-slate-700 hover:text-green-600 transition">
               Como Funciona
             </a>
 
-            <a href="#contato" className="hover:text-green-600 transition">
+            <a href="#contato" className="text-slate-700 hover:text-green-600 transition">
               Contato
             </a>
           </nav>
