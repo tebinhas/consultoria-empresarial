@@ -1,19 +1,53 @@
+"use client";
+
+import { useInView } from "@/hooks/useInView";
+
 export default function Process() {
+  const { ref, isInView } = useInView();
+  
   return (
     <section id="como-funciona" className="py-16 md:py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-4">
+      <style>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .process-title {
+          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.1s both' : 'none'};
+        }
+
+        .process-description {
+          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.2s both' : 'none'};
+        }
+
+        .process-step {
+          animation: ${isInView ? 'fadeInUp 0.8s ease-out both' : 'none'};
+        }
+
+        .process-step:nth-child(1) { animation-delay: 0.3s; }
+        .process-step:nth-child(2) { animation-delay: 0.4s; }
+        .process-step:nth-child(3) { animation-delay: 0.5s; }
+      `}</style>
+      <div className="max-w-6xl mx-auto px-6" ref={ref}>
+        <h2 className="process-title text-3xl md:text-4xl font-bold text-center text-slate-900 mb-4" style={{ fontFamily: 'var(--font-roboto)' }}>
           Como funciona a consultoria
         </h2>
 
-        <p className="text-center text-slate-600 max-w-2xl mx-auto mb-10">
+        <p className="process-description text-center text-slate-600 max-w-2xl mx-auto mb-10">
           Um processo simples, objetivo e focado em resultados.
         </p>
 
         {/* MOBILE */}
         <div className="md:hidden space-y-6">
 
-          <div className="flex gap-4">
+          <div className="process-step flex gap-4">
             <div className="w-10 h-10 bg-blue-900 rounded-full text-white flex items-center justify-center font-bold shrink-0">
               1
             </div>
@@ -31,7 +65,7 @@ export default function Process() {
 
           <div className="border-l-2 border-blue-200 ml-5 h-4"></div>
 
-          <div className="flex gap-4">
+          <div className="process-step flex gap-4">
             <div className="w-10 h-10 bg-blue-900 rounded-full text-white flex items-center justify-center font-bold shrink-0">
               2
             </div>

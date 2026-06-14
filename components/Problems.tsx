@@ -1,11 +1,16 @@
+"use client";
+
 import {
   ClipboardList,
   TrendingDown,
   Hourglass,
   TrendingUp,
 } from "lucide-react";
+import { useInView } from "@/hooks/useInView";
 
 export default function Problems() {
+  const { ref, isInView } = useInView();
+  
   const problems = [
     {
       title: "Falta de organização",
@@ -27,12 +32,41 @@ export default function Problems() {
 
   return (
     <section className="bg-slate-50 py-16 md:py-24">
-      <div className="max-w-6xl mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-slate-900 mb-4">
+      <style>{`
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .problems-title {
+          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.1s both' : 'none'};
+        }
+
+        .problems-description {
+          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.2s both' : 'none'};
+        }
+
+        .problem-card {
+          animation: ${isInView ? 'fadeInUp 0.8s ease-out both' : 'none'};
+        }
+
+        .problem-card:nth-child(1) { animation-delay: 0.3s; }
+        .problem-card:nth-child(2) { animation-delay: 0.4s; }
+        .problem-card:nth-child(3) { animation-delay: 0.5s; }
+        .problem-card:nth-child(4) { animation-delay: 0.6s; }
+      `}</style>
+      <div className="max-w-6xl mx-auto px-6" ref={ref}>
+        <h2 className="problems-title text-3xl md:text-4xl font-bold text-center text-slate-900 mb-4" style={{ fontFamily: 'var(--font-roboto)' }}>
           Sua empresa enfrenta algum destes desafios?
         </h2>
 
-        <p className="text-center text-slate-600 max-w-2xl mx-auto mb-10">
+        <p className="problems-description text-center text-slate-600 max-w-2xl mx-auto mb-10">
           Identificamos os principais gargalos e ajudamos sua empresa a tomar
           decisões com mais segurança.
         </p>
@@ -44,7 +78,7 @@ export default function Problems() {
             return (
               <div
                 key={problem.title}
-                className="bg-white p-4 rounded-xl shadow border text-center transition-all duration-300 md:hover:-translate-y-2 md:hover:shadow-xl"
+                className="problem-card bg-white p-4 rounded-xl shadow border text-center transition-all duration-300 md:hover:-translate-y-2 md:hover:shadow-xl"
               >
                 <div className="relative inline-flex mb-4">
                   <div className="w-16 h-16 rounded-full bg-red-50 flex items-center justify-center">

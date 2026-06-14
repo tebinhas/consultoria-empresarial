@@ -17,8 +17,9 @@ useEffect(() => {
   return (
     <header
           className={`fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b z-50 transition-all duration-300 ${
-          scrolled ? "shadow-xl bg-white/95" : ""}`}>
-      <div className="max-w-6xl mx-auto px-3 md:px-6">
+          scrolled ? "shadow-xl bg-white/95" : ""}`}
+          style={{ fontFamily: 'Avenir, Montserrat, system-ui, -apple-system, sans-serif' }}>
+      <div className="max-w-6xl mx-auto px-3 md:px-10">
         <div
         className={`flex items-center justify-between transition-all duration-300 ${
         scrolled ? "h-12 md:h-14" : "h-16 md:h-20"  }`}>
@@ -29,24 +30,24 @@ useEffect(() => {
             height={60}
             className={`transition-all duration-300 ${
               scrolled
-                ? "w-[60px] md:w-[90px]"
+                ? "w-[50px] md:w-[70px]"
                 : "w-[80px] md:w-[110px]"
             }`}/>
 
-          <nav className="hidden md:flex gap-8">
-            <a href="#inicio" className="text-slate-700 hover:text-blue-900 transition">
+          <nav className="hidden md:flex gap-10">
+            <a href="#inicio" className="text-slate-700 hover:text-blue-900 transition text-sm font-semibold tracking-wider uppercase">
               Início
             </a>
 
-            <a href="#servicos" className="text-slate-700 hover:text-blue-900 transition">
+            <a href="#servicos" className="text-slate-700 hover:text-blue-900 transition text-sm font-semibold tracking-wider uppercase">
               Serviços
             </a>
 
-            <a href="#como-funciona" className="text-slate-700 hover:text-blue-900 transition">
+            <a href="#como-funciona" className="text-slate-700 hover:text-blue-900 transition text-sm font-semibold tracking-wider uppercase">
               Como Funciona
             </a>
 
-            <a href="#contato" className="text-slate-700 hover:text-blue-900 transition">
+            <a href="#contato" className="text-slate-700 hover:text-blue-900 transition text-sm font-semibold tracking-wider uppercase">
               Contato
             </a>
           </nav>
@@ -55,10 +56,17 @@ useEffect(() => {
             href="https://wa.me/3299999999"
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-block bg-amber-600 hover:bg-amber-700 rounded-lg font-semibold shadow-lg hover:scale-105 transition-all duration-300 ${
+            className={`inline-block rounded-lg font-semibold shadow-lg hover:scale-105 transition-all duration-300 text-sm uppercase tracking-wider ${
               scrolled
               ? "px-3 py-1.5 md:px-5 md:py-2"
-              : "px-4 py-2 md:px-8 md:py-4"  }`}>
+              : "px-4 py-2 md:px-8 md:py-4"  }`}
+            style={{
+              backgroundColor: '#9A9252',
+              color: 'white'
+            }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#6F7139'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#9A9252'}
+          >
 
               <span className="md:hidden">WhatsApp</span>
               <span className="hidden md:inline">
