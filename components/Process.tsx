@@ -14,7 +14,7 @@ export default function Process() {
         <div className="md:hidden space-y-6">
 
           <div className="flex gap-4">
-            <div className="w-10 h-10 bg-green-600 rounded-full text-white flex items-center justify-center font-bold shrink-0">
+            <div className="w-10 h-10 bg-blue-900 rounded-full text-white flex items-center justify-center font-bold shrink-0">
               1
             </div>
 
@@ -29,10 +29,10 @@ export default function Process() {
             </div>
           </div>
 
-          <div className="border-l-2 border-green-200 ml-5 h-4"></div>
+          <div className="border-l-2 border-blue-200 ml-5 h-4"></div>
 
           <div className="flex gap-4">
-            <div className="w-10 h-10 bg-green-600 rounded-full text-white flex items-center justify-center font-bold shrink-0">
+            <div className="w-10 h-10 bg-blue-900 rounded-full text-white flex items-center justify-center font-bold shrink-0">
               2
             </div>
 
@@ -47,10 +47,10 @@ export default function Process() {
             </div>
           </div>
 
-          <div className="border-l-2 border-green-200 ml-5 h-4"></div>
+          <div className="border-l-2 border-blue-200 ml-5 h-4"></div>
 
           <div className="flex gap-4">
-            <div className="w-10 h-10 bg-green-600 rounded-full text-white flex items-center justify-center font-bold shrink-0">
+            <div className="w-10 h-10 bg-blue-900 rounded-full text-white flex items-center justify-center font-bold shrink-0">
               3
             </div>
 
@@ -71,7 +71,7 @@ export default function Process() {
         <div className="hidden md:grid md:grid-cols-3 gap-8">
 
           <div className="text-center p-5 md:p-8 rounded-xl border shadow">
-            <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
               1
             </div>
 
@@ -85,7 +85,7 @@ export default function Process() {
           </div>
 
           <div className="text-center p-5 md:p-8 rounded-xl border shadow">
-            <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
               2
             </div>
 
@@ -99,7 +99,7 @@ export default function Process() {
           </div>
 
           <div className="text-center p-5 md:p-8 rounded-xl border shadow">
-            <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
               3
             </div>
 

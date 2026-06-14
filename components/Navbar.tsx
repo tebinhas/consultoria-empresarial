@@ -25,28 +25,28 @@ useEffect(() => {
           <Image
             src="/logo.png"
             alt="Logo"
-            width={220}
+            width={60}
             height={60}
             className={`transition-all duration-300 ${
               scrolled
-                ? "w-[170px] md:w-[280px]"
-                : "w-[200px] md:w-[350px]"
-            } translate-y-2`}/>
+                ? "w-[60px] md:w-[90px]"
+                : "w-[80px] md:w-[110px]"
+            }`}/>
 
           <nav className="hidden md:flex gap-8">
-            <a href="#inicio" className="text-slate-700 hover:text-green-600 transition">
+            <a href="#inicio" className="text-slate-700 hover:text-blue-900 transition">
               Início
             </a>
 
-            <a href="#servicos" className="text-slate-700 hover:text-green-600 transition">
+            <a href="#servicos" className="text-slate-700 hover:text-blue-900 transition">
               Serviços
             </a>
 
-            <a href="#como-funciona" className="text-slate-700 hover:text-green-600 transition">
+            <a href="#como-funciona" className="text-slate-700 hover:text-blue-900 transition">
               Como Funciona
             </a>
 
-            <a href="#contato" className="text-slate-700 hover:text-green-600 transition">
+            <a href="#contato" className="text-slate-700 hover:text-blue-900 transition">
               Contato
             </a>
           </nav>
@@ -55,7 +55,7 @@ useEffect(() => {
             href="https://wa.me/3299999999"
             target="_blank"
             rel="noopener noreferrer"
-            className={`inline-block bg-green-600 hover:bg-green-700 rounded-lg font-semibold shadow-lg hover:scale-105 transition-all duration-300 ${
+            className={`inline-block bg-amber-600 hover:bg-amber-700 rounded-lg font-semibold shadow-lg hover:scale-105 transition-all duration-300 ${
               scrolled
               ? "px-3 py-1.5 md:px-5 md:py-2"
               : "px-4 py-2 md:px-8 md:py-4"  }`}>

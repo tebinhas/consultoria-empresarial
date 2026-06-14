@@ -18,7 +18,7 @@ export default function About() {
           </div>
 
           <div>
-            <span className="text-green-600 font-semibold uppercase">
+            <span className="text-blue-900 font-semibold uppercase">
               Sobre o Consultor
             </span>
 
@@ -35,28 +35,28 @@ export default function About() {
             <div className="space-y-2">
 
               <div className="flex items-center gap-2">
-                <span className="text-green-600 font-bold">✓</span>
+                <span className="text-amber-600 font-bold">✓</span>
                 <span className="text-slate-700">
                   Organização e Processos
                 </span>
               </div>
 
               <div className="flex items-center gap-2">
-                <span className="text-green-600 font-bold">✓</span>
+                <span className="text-amber-600 font-bold">✓</span>
                 <span className="text-slate-700">
                   Gestão Financeira
                 </span>
               </div>
 
               <div className="flex items-center gap-2">
-                <span className="text-green-600 font-bold">✓</span>
+                <span className="text-amber-600 font-bold">✓</span>
                 <span className="text-slate-700">
                   Planejamento Estratégico
                 </span>
               </div>
 
               <div className="flex items-center gap-2">
-                <span className="text-green-600 font-bold">✓</span>
+                <span className="text-amber-600 font-bold">✓</span>
                 <span className="text-slate-700">
                   Acompanhamento de Resultados
                 </span>

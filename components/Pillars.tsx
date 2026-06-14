@@ -10,7 +10,7 @@ export default function Pillars() {
 
         <div className="grid md:grid-cols-3 gap-5 md:gap-8">
           <div className="p-6 rounded-xl shadow-lg border md:hover:shadow-2xl md:hover:-translate-y-2 transition-all duration-300">
-            <div className="mb-4"><Briefcase size={40} className="text-green-600" />
+            <div className="mb-4"><Briefcase size={40} className="text-blue-900" />
             </div>
 
             <h3 className="text-xl font-bold mb-4 text-slate-900">
@@ -24,7 +24,7 @@ export default function Pillars() {
           </div>
 
           <div className="p-6 rounded-xl shadow-lg border md:hover:shadow-2xl md:hover:-translate-y-2 transition-all duration-300">
-            <div className="mb-4"><BarChart3 size={40} className="text-green-600" />
+            <div className="mb-4"><BarChart3 size={40} className="text-blue-900" />
             </div>
 
             <h3 className="text-xl font-bold mb-4 text-slate-900">
@@ -38,7 +38,7 @@ export default function Pillars() {
           </div>
 
           <div className="p-6 rounded-xl shadow-lg border md:hover:shadow-2xl md:hover:-translate-y-2 transition-all duration-300">
-            <div className="mb-4"><TrendingUp size={40} className="text-green-600" />
+            <div className="mb-4"><TrendingUp size={40} className="text-blue-900" />
             </div>
 
             <h3 className="text-xl font-bold mb-4 text-slate-900">
