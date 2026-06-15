@@ -12,7 +12,7 @@ export default function About() {
         @keyframes fadeInUp {
           from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(50px);
           }
           to {
             opacity: 1;
@@ -21,29 +21,39 @@ export default function About() {
         }
 
         .about-image {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.1s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.1s forwards' : 'none'};
         }
 
         .about-label {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.2s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.2s forwards' : 'none'};
         }
 
         .about-title {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.3s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.3s forwards' : 'none'};
         }
 
         .about-description {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.4s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.4s forwards' : 'none'};
         }
 
         .about-item {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out forwards' : 'none'};
         }
 
-        .about-item:nth-child(1) { animation-delay: 0.5s; }
-        .about-item:nth-child(2) { animation-delay: 0.6s; }
-        .about-item:nth-child(3) { animation-delay: 0.7s; }
-        .about-item:nth-child(4) { animation-delay: 0.8s; }
+        .about-item:nth-child(1) { animation-delay: ${isInView ? '0.5s' : '0s'}; }
+        .about-item:nth-child(2) { animation-delay: ${isInView ? '0.6s' : '0s'}; }
+        .about-item:nth-child(3) { animation-delay: ${isInView ? '0.7s' : '0s'}; }
+        .about-item:nth-child(4) { animation-delay: ${isInView ? '0.8s' : '0s'}; }
       `}</style>
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
 

@@ -14,7 +14,7 @@ export const useInView = (options = {}) => {
         observer.unobserve(entry.target);
       }
     }, {
-      threshold: 0.1,
+      threshold: 0.3,
       ...options,
     });
 

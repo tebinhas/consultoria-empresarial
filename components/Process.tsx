@@ -11,7 +11,7 @@ export default function Process() {
         @keyframes fadeInUp {
           from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(50px);
           }
           to {
             opacity: 1;
@@ -20,20 +20,26 @@ export default function Process() {
         }
 
         .process-title {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.1s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.1s forwards' : 'none'};
         }
 
         .process-description {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.2s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.2s forwards' : 'none'};
         }
 
         .process-step {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out forwards' : 'none'};
         }
 
-        .process-step:nth-child(1) { animation-delay: 0.3s; }
-        .process-step:nth-child(2) { animation-delay: 0.4s; }
-        .process-step:nth-child(3) { animation-delay: 0.5s; }
+        .process-step:nth-child(1) { animation-delay: ${isInView ? '0.3s' : '0s'}; }
+        .process-step:nth-child(2) { animation-delay: ${isInView ? '0.4s' : '0s'}; }
+        .process-step:nth-child(3) { animation-delay: ${isInView ? '0.5s' : '0s'}; }
       `}</style>
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <h2 className="process-title text-3xl md:text-4xl font-bold text-center text-slate-900 mb-4" style={{ fontFamily: 'var(--font-roboto)' }}>
@@ -83,7 +89,7 @@ export default function Process() {
 
           <div className="border-l-2 border-blue-200 ml-5 h-4"></div>
 
-          <div className="flex gap-4">
+          <div className="process-step flex gap-4">
             <div className="w-10 h-10 bg-blue-900 rounded-full text-white flex items-center justify-center font-bold shrink-0">
               3
             </div>
@@ -104,7 +110,7 @@ export default function Process() {
         {/* DESKTOP */}
         <div className="hidden md:grid md:grid-cols-3 gap-8">
 
-          <div className="text-center p-5 md:p-8 rounded-xl border shadow">
+          <div className="process-step text-center p-5 md:p-8 rounded-xl border shadow">
             <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
               1
             </div>
@@ -118,7 +124,7 @@ export default function Process() {
             </p>
           </div>
 
-          <div className="text-center p-5 md:p-8 rounded-xl border shadow">
+          <div className="process-step text-center p-5 md:p-8 rounded-xl border shadow">
             <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
               2
             </div>
@@ -132,7 +138,7 @@ export default function Process() {
             </p>
           </div>
 
-          <div className="text-center p-5 md:p-8 rounded-xl border shadow">
+          <div className="process-step text-center p-5 md:p-8 rounded-xl border shadow">
             <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
               3
             </div>

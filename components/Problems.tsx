@@ -36,7 +36,7 @@ export default function Problems() {
         @keyframes fadeInUp {
           from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(50px);
           }
           to {
             opacity: 1;
@@ -45,21 +45,27 @@ export default function Problems() {
         }
 
         .problems-title {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.1s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.1s forwards' : 'none'};
         }
 
         .problems-description {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.2s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.2s forwards' : 'none'};
         }
 
         .problem-card {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out forwards' : 'none'};
         }
 
-        .problem-card:nth-child(1) { animation-delay: 0.3s; }
-        .problem-card:nth-child(2) { animation-delay: 0.4s; }
-        .problem-card:nth-child(3) { animation-delay: 0.5s; }
-        .problem-card:nth-child(4) { animation-delay: 0.6s; }
+        .problem-card:nth-child(1) { animation-delay: ${isInView ? '0.3s' : '0s'}; }
+        .problem-card:nth-child(2) { animation-delay: ${isInView ? '0.4s' : '0s'}; }
+        .problem-card:nth-child(3) { animation-delay: ${isInView ? '0.5s' : '0s'}; }
+        .problem-card:nth-child(4) { animation-delay: ${isInView ? '0.6s' : '0s'}; }
       `}</style>
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <h2 className="problems-title text-3xl md:text-4xl font-bold text-center text-slate-900 mb-4" style={{ fontFamily: 'var(--font-roboto)' }}>

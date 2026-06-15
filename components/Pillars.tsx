@@ -12,7 +12,7 @@ export default function Pillars() {
         @keyframes fadeInUp {
           from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(50px);
           }
           to {
             opacity: 1;
@@ -21,16 +21,20 @@ export default function Pillars() {
         }
 
         .pillar-title {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.1s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.1s forwards' : 'none'};
         }
 
         .pillar-card {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out forwards' : 'none'};
         }
 
-        .pillar-card:nth-child(1) { animation-delay: 0.2s; }
-        .pillar-card:nth-child(2) { animation-delay: 0.3s; }
-        .pillar-card:nth-child(3) { animation-delay: 0.4s; }
+        .pillar-card:nth-child(1) { animation-delay: ${isInView ? '0.2s' : '0s'}; }
+        .pillar-card:nth-child(2) { animation-delay: ${isInView ? '0.3s' : '0s'}; }
+        .pillar-card:nth-child(3) { animation-delay: ${isInView ? '0.4s' : '0s'}; }
       `}</style>
       <div className="max-w-6xl mx-auto px-6" ref={ref}>
         <h2 className="pillar-title text-4xl font-bold text-center mb-10 text-slate-900" style={{ fontFamily: 'var(--font-roboto)' }}>

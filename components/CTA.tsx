@@ -14,7 +14,7 @@ export default function CTA() {
         @keyframes fadeInUp {
           from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(50px);
           }
           to {
             opacity: 1;
@@ -23,15 +23,21 @@ export default function CTA() {
         }
 
         .cta-title {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.1s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.1s forwards' : 'none'};
         }
 
         .cta-description {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.2s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.2s forwards' : 'none'};
         }
 
         .cta-button {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.3s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.3s forwards' : 'none'};
         }
       `}</style>
       <div className="max-w-4xl mx-auto text-center px-6" ref={ref}>

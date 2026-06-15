@@ -18,7 +18,7 @@ export default function Hero() {
         @keyframes fadeInUp {
           from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(50px);
           }
           to {
             opacity: 1;
@@ -27,19 +27,27 @@ export default function Hero() {
         }
 
         .hero-badge {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.1s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.1s forwards' : 'none'};
         }
 
         .hero-title {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.2s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.2s forwards' : 'none'};
         }
 
         .hero-description {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.3s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.3s forwards' : 'none'};
         }
 
         .hero-button {
-          animation: ${isInView ? 'fadeInUp 0.8s ease-out 0.4s both' : 'none'};
+          opacity: 0;
+          transform: translateY(50px);
+          animation: ${isInView ? 'fadeInUp 1.2s ease-out 0.4s forwards' : 'none'};
         }
       `}</style>
       <div className="relative z-10 max-w-6xl mx-auto px-6 pt-28 pb-16 md:pt-40 md:pb-24" ref={ref}>
